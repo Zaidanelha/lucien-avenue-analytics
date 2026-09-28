@@ -1,0 +1,17 @@
+# Environment & secrets
+.env
+.venv/
+venv/
+
+# Data hasil generate (bisa dibuat ulang dengan run_pipeline.py)
+data/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store

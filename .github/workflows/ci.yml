@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Unit tests
+        run: pytest -v
+      - name: End-to-end pipeline (dataset kecil)
+        env:
+          N_CUSTOMERS: "1000"
+          BASE_DAILY_ORDERS: "5"
+        run: python run_pipeline.py all

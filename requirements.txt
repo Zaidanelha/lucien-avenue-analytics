@@ -1,0 +1,10 @@
+pandas>=2.1
+numpy>=1.26
+SQLAlchemy>=2.0
+Faker>=24.0
+python-dotenv>=1.0
+plotly>=5.20
+streamlit>=1.35
+pytest>=8.0
+# Opsional, hanya jika memakai MySQL/MariaDB (mis. XAMPP):
+PyMySQL>=1.1
